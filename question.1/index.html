@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="./script.php">
+        <label for="word">Type Your Words:</label><br><br>
+        <input type="text" id="word" name="word">
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+    <br>
+    <div class="explaination">
+        <h4>Explaination</h4>
+        <p>In this test build 2 types of input,<br> - 1st one is get input word from html form and excute php script from html.</p>
+        <p> - 2nd one is running php script file from terminal, put arguments as input like</p>
+        <code>
+            php q1.php arg1 arg2 arg3
+        </code>
+
+         <h4>How it works</h4>
+         <p>This program is build for count string of last word. First step input accept the data we type. And split the data input into pieces using <strong>explode</strong> method, then we take last word with <strong>end</strong> method. After that passed data as a aurgument to length function.</p>
+         <p> Inside length function, start a for loop and iterates the string we passed before within strlen function,which returns the length of a string. And condition check every alphabet lettter between a~z or A~Z on each looping time. If a letter not a alphabet letter, the condition wont count the letter of string and export the length or count of alphabet string.
+        </p>
+
+        <h4>Remark</h4>
+        <p>If you enters not letter of words like number or other character this porgram won't count. And also won't count the words combine with other characters such as "e!ght" "f1ve", will count the length of the alphabet letters only after special characters or numbers. </p>
+    </div>
+
+    <script>
+        function showResult(result) {
+          document.getElementById("result").innerHTML = result;
+        }
+    </script>  
+</body>
+</html>
